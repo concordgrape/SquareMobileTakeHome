@@ -7,6 +7,7 @@
 
 import Foundation
 
+//  Variable names retrieved from the JSON file
 struct EmployeeConstants {
     static let FULL_NAME: String = "full_name"
     static let BIOGRAPHY: String = "biography"
@@ -14,6 +15,7 @@ struct EmployeeConstants {
     static let TEAM: String = "team"
 }
 
+//  Nicely formatted version of the variables retrieved from the JSON file (for tableview)
 struct EmployeeTitleConstants {
     static let FULL_NAME: String = "Full Name"
     static let BIOGRAPHY: String = "Summary"

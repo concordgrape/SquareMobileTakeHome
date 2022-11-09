@@ -9,23 +9,42 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     
+    //  MARK: - VARIABLES
     let screenSize: CGRect = UIScreen.main.bounds
         
+    
+    //  MARK: - VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         setupUI()
         getEmployeeData()
     }
     
+    //  MARK: - VIEWDIDAPPEAR
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
+    
+    //  MARK: - MAIN FUNCTIONS
     @objc func refresh(_ sender: AnyObject) {
         getEmployeeData()
         tableView.reloadData()
         self.refreshControl?.endRefreshing()
+        
+        if EmployeeData.parsedEmployees.count == 0 {
+            createAlert(title: "Error", message: "No employees can be loaded, please try again later")
+        }
+    }
+    
+    func createAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func setupUI() {
@@ -36,10 +55,9 @@ class MainTableViewController: UITableViewController {
         tableView.allowsSelection = false
     }
 
-    // MARK: - Table view data source
+    // MARK: - TABLEVIEW
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return EmployeeData.parsedEmployees.count
     }
     
@@ -48,7 +66,6 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 3
     }
     
@@ -59,6 +76,7 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "employeeCell")! as UITableViewCell
         
+        //  Clear out the cell before adding new data
         cell.textLabel!.text = ""
         cell.imageView?.image = UIImage()
         cell.detailTextLabel!.text = ""

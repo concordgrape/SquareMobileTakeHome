@@ -12,6 +12,7 @@
     1. Ensure Xcode is properly installed with a simulator and/or a physical device present
     2. Have a secure internet connection (Used to retrieve JSON and image data)
     3. After selecting a simulator or a physical device, click the "play" button on Xcode to build and run the application
+    4. If data isn't present on the screen, you may need to pull to refresh
     
     *As the application won't be submitted to the App Store, you do not need to worry about signing and/or profiles/certificates
 

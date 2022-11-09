@@ -7,14 +7,17 @@
 
 import Foundation
 
+//  Store the parsed Employees
 struct EmployeeData {
     static var parsedEmployees = [Employee]()
 }
 
+// Get the employee data from the external JSON file, use the default URL if nothing is provided
 func getEmployeeData(url: URL = ExternalConstants.DEFAULT_EMPLOYEES_URL) {
     
     var parsedEmployees: [Employee] = []
     
+    //  Start the URLSession to recieve data
     let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
         guard let data = data else { return }
         do {
@@ -22,6 +25,8 @@ func getEmployeeData(url: URL = ExternalConstants.DEFAULT_EMPLOYEES_URL) {
             if let arrJSON = allContacts["employees"] {
                 if arrJSON.count == 0 { return }
                 parsedEmployees.removeAll()
+                
+                //  Check each employee and create a new struct instance
                 for index in 0...arrJSON.count-1 {
                     let aObject = arrJSON.object(at: index)
                                  

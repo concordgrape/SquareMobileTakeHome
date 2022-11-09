@@ -8,11 +8,10 @@
 import Foundation
 import UIKit
 
+//  Download an image from a URL
 func downloadImage(from url: URL) -> UIImage {
-    
     if let data = try? Data(contentsOf: url) {
         return UIImage(data: data)!
     }
-    
     return UIImage()
 }

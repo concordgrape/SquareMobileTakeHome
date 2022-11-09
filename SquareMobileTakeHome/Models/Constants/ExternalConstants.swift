@@ -7,6 +7,7 @@
 
 import Foundation
 
+//  URLs to the external JSON files
 struct ExternalConstants {
     static let DEFAULT_EMPLOYEES_URL: URL = URL(string: "https://s3.amazonaws.com/sq-mobile-interview/employees.json")!
     static let EMPLOYEES_MALFORMED_URL: URL = URL(string: "https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json")!
