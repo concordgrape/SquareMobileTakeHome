@@ -11,11 +11,11 @@ struct EmployeeData {
     static var parsedEmployees = [Employee]()
 }
 
-func getEmployeeData() {
+func getEmployeeData(url: URL = ExternalConstants.DEFAULT_EMPLOYEES_URL) {
     
     var parsedEmployees: [Employee] = []
     
-    let task = URLSession.shared.dataTask(with: ExternalConstants.DEFAULT_EMPLOYEES_URL) {(data, response, error) in
+    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
         guard let data = data else { return }
         do {
             let allContacts = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : AnyObject]

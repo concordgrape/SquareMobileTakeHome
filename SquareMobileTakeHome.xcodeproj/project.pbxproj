@@ -19,7 +19,18 @@
 		BCAB574F291C421300F3FD30 /* ExternalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB574E291C421300F3FD30 /* ExternalConstants.swift */; };
 		BCAB5752291C428000F3FD30 /* EmployeeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB5751291C428000F3FD30 /* EmployeeAPI.swift */; };
 		BCAB5755291C4EAB00F3FD30 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB5754291C4EAB00F3FD30 /* ImageData.swift */; };
+		BCAB575D291C5B3100F3FD30 /* SquareMobileTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB575C291C5B3100F3FD30 /* SquareMobileTakeHomeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCAB575E291C5B3100F3FD30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCAB571B291C3FC300F3FD30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCAB5722291C3FC300F3FD30;
+			remoteInfo = SquareMobileTakeHome;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BCAB5723291C3FC300F3FD30 /* SquareMobileTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareMobileTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +47,19 @@
 		BCAB574E291C421300F3FD30 /* ExternalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalConstants.swift; sourceTree = "<group>"; };
 		BCAB5751291C428000F3FD30 /* EmployeeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPI.swift; sourceTree = "<group>"; };
 		BCAB5754291C4EAB00F3FD30 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		BCAB575A291C5B3100F3FD30 /* SquareMobileTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquareMobileTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCAB575C291C5B3100F3FD30 /* SquareMobileTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareMobileTakeHomeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BCAB5720291C3FC300F3FD30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCAB5757291C5B3100F3FD30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				BCAB5725291C3FC300F3FD30 /* SquareMobileTakeHome */,
+				BCAB575B291C5B3100F3FD30 /* SquareMobileTakeHomeTests */,
 				BCAB5724291C3FC300F3FD30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				BCAB5723291C3FC300F3FD30 /* SquareMobileTakeHome.app */,
+				BCAB575A291C5B3100F3FD30 /* SquareMobileTakeHomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +179,14 @@
 			path = EmployeeAPI;
 			sourceTree = "<group>";
 		};
+		BCAB575B291C5B3100F3FD30 /* SquareMobileTakeHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCAB575C291C5B3100F3FD30 /* SquareMobileTakeHomeTests.swift */,
+			);
+			path = SquareMobileTakeHomeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +207,24 @@
 			productReference = BCAB5723291C3FC300F3FD30 /* SquareMobileTakeHome.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BCAB5759291C5B3100F3FD30 /* SquareMobileTakeHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCAB5760291C5B3100F3FD30 /* Build configuration list for PBXNativeTarget "SquareMobileTakeHomeTests" */;
+			buildPhases = (
+				BCAB5756291C5B3100F3FD30 /* Sources */,
+				BCAB5757291C5B3100F3FD30 /* Frameworks */,
+				BCAB5758291C5B3100F3FD30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCAB575F291C5B3100F3FD30 /* PBXTargetDependency */,
+			);
+			name = SquareMobileTakeHomeTests;
+			productName = SquareMobileTakeHomeTests;
+			productReference = BCAB575A291C5B3100F3FD30 /* SquareMobileTakeHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,6 +237,10 @@
 				TargetAttributes = {
 					BCAB5722291C3FC300F3FD30 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					BCAB5759291C5B3100F3FD30 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = BCAB5722291C3FC300F3FD30;
 					};
 				};
 			};
@@ -206,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				BCAB5722291C3FC300F3FD30 /* SquareMobileTakeHome */,
+				BCAB5759291C5B3100F3FD30 /* SquareMobileTakeHomeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +271,13 @@
 				BCAB5733291C3FC800F3FD30 /* LaunchScreen.storyboard in Resources */,
 				BCAB5730291C3FC800F3FD30 /* Assets.xcassets in Resources */,
 				BCAB572E291C3FC300F3FD30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCAB5758291C5B3100F3FD30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +300,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCAB5756291C5B3100F3FD30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCAB575D291C5B3100F3FD30 /* SquareMobileTakeHomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCAB575F291C5B3100F3FD30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCAB5722291C3FC300F3FD30 /* SquareMobileTakeHome */;
+			targetProxy = BCAB575E291C5B3100F3FD30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BCAB572C291C3FC300F3FD30 /* Main.storyboard */ = {
@@ -438,6 +514,42 @@
 			};
 			name = Release;
 		};
+		BCAB5761291C5B3100F3FD30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2WBD7U8CLH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyroth.SquareMobileTakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SquareMobileTakeHome.app/SquareMobileTakeHome";
+			};
+			name = Debug;
+		};
+		BCAB5762291C5B3100F3FD30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2WBD7U8CLH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyroth.SquareMobileTakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SquareMobileTakeHome.app/SquareMobileTakeHome";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -455,6 +567,15 @@
 			buildConfigurations = (
 				BCAB5738291C3FC800F3FD30 /* Debug */,
 				BCAB5739291C3FC800F3FD30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCAB5760291C5B3100F3FD30 /* Build configuration list for PBXNativeTarget "SquareMobileTakeHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCAB5761291C5B3100F3FD30 /* Debug */,
+				BCAB5762291C5B3100F3FD30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
